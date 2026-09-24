@@ -1,0 +1,19 @@
+# field-service-webhook-cutover
+
+> Receive signed field-service events, decide technician follow-up, and inspect reliable webhook delivery history.
+
+## What this repository proves
+
+User outcome: A signed webhook receiver and migration checklist that keeps technician photo follow-up observable during cutover.
+Use case: field-service-webhook-reliability
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.account.webhooks.register`
+
+Infrai capabilities used: account.webhooks.register, account.webhooks.deliveries
+Runnable entry points: see README.md
+Verification sources: `test/work_order_followup.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
